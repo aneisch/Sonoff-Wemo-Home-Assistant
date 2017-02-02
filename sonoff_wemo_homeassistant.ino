@@ -5,9 +5,9 @@
 //Majority of code is from https://github.com/torinnguyen/ESP8266Wemo
 
 const char* ssid = "YOUR_SSID";                       // your network SSID (name)
-const char* pass = "YOUR_PASSCODE";                       // your network password
+const char* pass = "YOUR_PASSWORD";                       // your network password
 
-String friendlyName = "Emulated Wemo";           // Alexa and/or Home Assistant will use this name to identify your device
+String friendlyName = "emulated_wemo_1";           // Alexa and/or Home Assistant will use this name to identify your device
 const char* serialNumber = "221517K0101768";                  // anything will do
 const char* uuid = "904bfa3c-1de2-11v2-8728-fd8eebaf492d";    // anything will do
 
@@ -375,6 +375,7 @@ void setup()
   digitalWrite(RELAY_PIN, 0);
 
   // setting up Station AP
+  WiFi.mode(WIFI_STA); //Stop wifi broadcast
   WiFi.begin(ssid, pass);
 
   // Wait for connect to AP
