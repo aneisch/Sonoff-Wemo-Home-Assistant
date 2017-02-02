@@ -2,6 +2,8 @@
 #include <ESP8266WebServer.h>
 #include <WiFiUDP.h>
 
+//Majority of code is from https://github.com/torinnguyen/ESP8266Wemo
+
 const char* ssid = "YOUR_SSID";                       // your network SSID (name)
 const char* pass = "YOUR_PASSCODE";                       // your network password
 
